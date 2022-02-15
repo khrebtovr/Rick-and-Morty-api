@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    padding: 20px;
+}
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid blue;
+    border-radius: 8px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.link-episodes{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.link-episodes:hover{
+    text-decoration: underline;
+}
+
+.character-button{
+    padding: 5px;
+    margin-top: auto;
+
+}
+.modal-outer{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .6s;
+}
+.modal-inner{
+    width: 500px;
+    height: 500px;
+    background: yellowgreen;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.modal-outer.open{
+    opacity: 1;
+    pointer-events: all;
+}
+.close-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal-inner img{
+    width: 200px;
+    height: 200px;
+}
