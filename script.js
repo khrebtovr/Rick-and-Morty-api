@@ -25,7 +25,7 @@ async function getCharacters() {
   function createLinkEpisodes(id){
     const characterEpisodes= document.createElement('a');
     characterEpisodes.classList.add('link-episodes');
-    characterEpisodes.href = `/details.html?id=${id}`;
+    characterEpisodes.href = `/Rick-and-Morty-api/details.html?id=${id}`;
     characterEpisodes.textContent = `Episodes`;
     return characterEpisodes;
   }
